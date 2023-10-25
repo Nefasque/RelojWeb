@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  background: #4ac;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root{
+  --colorPrymari: #f8814f;
+  --colorPrymaritralucero: #f8814f5a;
+}
+
+
+.header {
+  width: 80%;
+  padding: 2.3rem 0;
+  margin: auto;
+}
+
+.header h1 {
+  color: var(--colorPrymari) ;
+  text-decoration: 2px dashed underline;
+  text-shadow: 0 0 0.2rem #000;
+}
+
+.header p {
+  color: #fff;
+}
+
+/*
+* Grid MAIn
+*/
+
+.main {
+  width: 99%;
+  max-width: 500px;
+  margin: auto;
+  height: auto;
+  border-radius: .4rem;
+  background: #fff;
+
+  overflow: hidden;
+
+  display: grid;  
+  grid-auto-flow: dense;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    "tabs tabs tabs"
+    "cont cont cont"
+}
+
+.tab{
+  grid-area: tabs;
+}
+
+.tab-conteiner{
+  grid-area: cont;
+  margin-top: 2rem;
+}
+
+
+
+/*Tabs*/
+
+.tab {
+  width: 100%;
+  margin: 0;
+}
+
+.tab ul{
+  width: 100%;
+  margin: auto;
+  list-style: none;
+  text-align: left;
+  
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid var(--colorPrymari);
+
+}
+
+.tab ul li{
+  padding: 0.3rem;
+  flex-grow: 1;
+  text-align: center;
+  max-width: 8rem;
+}
+
+
+.tab ul li:hover{
+  background: linear-gradient(to bottom, #0000, var(--colorPrymaritralucero));
+  cursor: pointer;
+}
+
+.LIActive{
+  background: linear-gradient(to bottom, #0000, var(--colorPrymaritralucero));
+}
+
+.tab ul li:hover > a{
+  color: #555;
+}
+
+a{
+  text-decoration: none;
+  color: #222;
+  font-size: .8rem;
+}
+
+
+/* GRID-Alamar */
+.grid-setAlarma{
+  display: grid;
+  grid-template-areas: 
+    "controles"
+    "reloj";
+}
+
+.controles{
+  grid-area: controles;
+  display: flex; 
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.setAlarma{
+  margin: 0 0 1rem;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#Alarma{
+  padding: 4px;
+  border: 1px solid var(--colorPrymari);
+  outline: none;
+}
+
+.btn{
+  background: none;
+  border: none;
+  padding: .2rem;
+}
+
+.btn-Estableser{
+  background: var(--colorPrymari);
+  width: auto;
+  padding: 0px .5rem;
+  text-align: center;
+  border-start-end-radius: .4rem;
+  border-end-end-radius: .4rem;
+}
+
+.TableAlarma{
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--colorPrymari) 1px solid; 
+}
+
+.tr1{
+  background: #fff6e5;
+  height: 2rem;
+}
+.tr2{
+  background: #ffe;
+  height: 2rem;
+}
+
+.time{
+  background: none;
+  border: none;
+  color: #222;
+  font-weight: bold;
+}
+
+/*Reloj*/
+.reloj{
+  grid-area: reloj;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-bottom: 2px solid var(--colorPrymari);
+  background: linear-gradient(to bottom, #0000,  var(--colorPrymaritralucero));
+}
+
+.reloj tbody{
+  width: 100%; 
+  height: auto;
+}
+
+.reloj tbody tr th {
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
