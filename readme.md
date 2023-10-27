@@ -8,7 +8,7 @@ Esta aplicación web es un reloj interactivo que ofrece funciones como dar alarm
 
 ## Funcionalidades
 
-[Alarma](alarma)
+### alarma
 
 La función de alarma permite al usuario establecer una alarma que suena cuando se activa. El usuario puede elegir la hora y el día de la semana para activar la alarma. También puede ajustar el volumen de la alarma y elegir si desea recibir notificaciones push.
 
