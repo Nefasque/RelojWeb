@@ -15,25 +15,6 @@ body {
   --colorPrymari-oscuro: #ec4822;
 }
 
-
-
-
-.header {
-  width: 80%;
-  padding: 2.3rem 0;
-  margin: auto;
-}
-
-.header h1 {
-  color: var(--colorPrymari) ;
-  text-decoration: 2px dashed underline;
-  text-shadow: 0 0 0.2rem #000;
-}
-
-.header p {
-  color: #fff;
-}
-
 /*
 * Grid MAIn
 */
@@ -125,17 +106,15 @@ a{
   align-content: center;
 }
 
-
+/*Buttom alarmar*/
 .setAlarma{
   grid-area: setAlarma;
-  margin: 0 0 1rem;
-  padding: 10px 0;
   text-align: right; 
 }
 
 .btn-add{
   color: var(--colorPrymari);
-  font-size: 2em;
+  font-size: 2.2em;
   margin: 0 5px;
   cursor: pointer;
 }
@@ -148,9 +127,117 @@ a{
   background: none;
   border: none;
   padding: .2rem;
+  cursor: pointer;
 }
 
 
+/*modal-backgroup*/
+.modal-backgroup{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+/*modal*/
+.modal{
+  width: 100%;
+  max-width: 500px;
+  height: 60vh;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 200;
+}
+
+
+/*modal-SetAlarma*/
+.modal-setAlarma{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: dense;
+  grid-template-areas: 
+    "title title"
+    "label-1 name"
+    "label-2 contentSelect"
+    "btn-save btn-save";
+
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+
+.modal-setAlarma label{
+  text-align: center;
+}
+
+.modal-setAlarma .select{
+  width: min-content;
+  margin: 0 10px;
+  background: none;
+  border: none;
+}
+
+.modal-setAlarma h2{
+  grid-area: title;
+  text-align: center;
+}
+
+.modal-setAlarma .label-1{
+  text-align: center;
+}
+
+#NombreAlarma{
+  grid-area: name;
+  height: 2rem;
+  border: 1px solid var(--colorPrymari);
+  width: 50%;
+  margin: auto;
+  padding: 0 5px;
+  outline: none;
+}
+
+#NombreAlarma:focus{
+  border: 2px solid var(--colorPrymari-oscuro) ;
+}
+
+.modal-setAlarma .label-2{
+  grid-area: label-2;
+}
+
+.contentSelect{
+  grid-area: contentSelect;
+  height: 2rem;
+  width: 50%;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-save{
+  grid-area: btn-save;
+  width: 60%;
+  margin: 1rem auto;
+  font-size: 1.2em;
+  color: #fff;
+  display: flex;
+  background: var(--colorPrymari);
+  padding: 5px 10px;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+
+.btn-cancel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+}
 
 .TableAlarma{
   width: 100%;
@@ -175,7 +262,6 @@ a{
 .btn-accion:hover{
   color: #f00;
   background: #fe15244e;
-  cursor: pointer;
 }
 
 /*Reloj*/
@@ -202,5 +288,6 @@ a{
   padding: 10px;
   border-radius: 40px;
   box-shadow: 0 0 5px var(--colorPrymari);
+  border: 1px solid var(--colorPrymari);
 }
 
