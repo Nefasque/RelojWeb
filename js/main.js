@@ -37,11 +37,9 @@ const L_Main = () => {
 
 const L_TabConteniner = (section) => {
   let div;
-
   if (section == "Alarma") div = L_Alarmar();
   else if (section == "Cronometro") alert("Cronometro");
   else if (section == "Cuenta Regresiva") alert("Cuenta Regresiva");
-
   return div;
 };
 
@@ -91,11 +89,10 @@ const L_TableAlarma = () => {
 const L_NewRowTableAlarma = (date) => {
   const tr = document.createElement("TR");
   tr.innerHTML = `
-    <tr class="tr1">
-      <th><p>E</p></th>
+    <t class="tr1">
       <th><p>${date.name}</p></th>
       <th><p><input type="time" class="time" disabled value="${date.value}"></p></th>
-      <th><p>X</p></th>
+      <th><button class="btn">E</button><button class="btn">X</button></th>
     </tr>
   `;
   return tr;
@@ -119,7 +116,6 @@ const L_Reloj = () => {
         <th title="minutos" id="minutos"></th>
         <th>:</th>
         <th title="segundos" id="segundos"></th>
-        <th id="PM_AM">AM</th>
       </tr>
     </tbody>
   `;
@@ -129,16 +125,16 @@ const L_Reloj = () => {
 
 ////////////////////////////FUNCIONES
 
-addEventListener("load", () => {
-  const body = document.querySelector("body");
-  const header = L_Header();
-  const main = L_Main();
-  body.appendChild(header);
-  body.appendChild(main);
-  CalibrarReloj();
-  F_Reloj();
-});
-
+// addEventListener("load", () => {
+//   const body = document.querySelector("body");
+//   const header = L_Header();
+//   const main = L_Main();
+//   body.appendChild(header);
+//   body.appendChild(main);
+//   CalibrarReloj();
+//   F_Reloj();
+// });
+//
 /////////////////////////////////// Reloj
 
 const segundoUpdate = (segundo) =>

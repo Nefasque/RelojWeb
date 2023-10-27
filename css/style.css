@@ -4,15 +4,18 @@
 }
 
 body {
-  color: #333;
-  background: #4ac;
+  color: #000;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #fff;
 }
 
 :root{
   --colorPrymari: #f8814f;
   --colorPrymaritralucero: #f8814f5a;
+  --colorPrymari-oscuro: #ec4822;
 }
+
+
 
 
 .header {
@@ -41,7 +44,6 @@ body {
   margin: auto;
   height: auto;
   border-radius: .4rem;
-  background: #fff;
 
   overflow: hidden;
 
@@ -59,7 +61,6 @@ body {
 
 .tab-conteiner{
   grid-area: cont;
-  margin-top: 2rem;
 }
 
 
@@ -114,31 +115,33 @@ a{
 /* GRID-Alamar */
 .grid-setAlarma{
   display: grid;
+  grid-auto-columns: 1fr;
   grid-template-areas: 
-    "controles"
-    "reloj";
+    "reloj"
+    "setAlarma"
+    "Alarma";
+
+  justify-content: center;
+  align-content: center;
 }
 
-.controles{
-  grid-area: controles;
-  display: flex; 
-  flex-direction: column;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-}
 
 .setAlarma{
+  grid-area: setAlarma;
   margin: 0 0 1rem;
   padding: 10px 0;
-  display: flex;
-  justify-content: center;
+  text-align: right; 
 }
 
-#Alarma{
-  padding: 4px;
-  border: 1px solid var(--colorPrymari);
-  outline: none;
+.btn-add{
+  color: var(--colorPrymari);
+  font-size: 2em;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.btn-add:hover{
+  color: var(--colorPrymari-oscuro); 
 }
 
 .btn{
@@ -147,44 +150,40 @@ a{
   padding: .2rem;
 }
 
-.btn-Estableser{
-  background: var(--colorPrymari);
-  width: auto;
-  padding: 0px .5rem;
-  text-align: center;
-  border-start-end-radius: .4rem;
-  border-end-end-radius: .4rem;
-}
+
 
 .TableAlarma{
   width: 100%;
+  grid-area: Alarma;
   border-collapse: collapse;
   border: var(--colorPrymari) 1px solid; 
+  font-size: 1.5em;
 }
 
-.tr1{
-  background: #fff6e5;
-  height: 2rem;
-}
-.tr2{
-  background: #ffe;
-  height: 2rem;
+.TableAlarma tbody tr th{
+  padding: 10px 0;
 }
 
-.time{
-  background: none;
-  border: none;
-  color: #222;
-  font-weight: bold;
+
+.btn-accion {
+  font-size: 1em;
+  color: #fe15244e;
+  border-radius: 3px;
+  background: #fe15241e;
+}
+
+.btn-accion:hover{
+  color: #f00;
+  background: #fe15244e;
+  cursor: pointer;
 }
 
 /*Reloj*/
 .reloj{
   grid-area: reloj;
-  margin-top: 20px;
   border-collapse: collapse;
-  border-bottom: 2px solid var(--colorPrymari);
-  background: linear-gradient(to bottom, #0000,  var(--colorPrymaritralucero));
+  width: min-content;
+  margin: auto;
 }
 
 .reloj tbody{
@@ -193,20 +192,15 @@ a{
 }
 
 .reloj tbody tr th {
-  font-size: 1.2em;
-  padding: 10px;
+  font-size: 1.8em;
+  padding: 0 0.2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.reloj-backgroup{
+  width: min-content;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px var(--colorPrymari);
+}
 

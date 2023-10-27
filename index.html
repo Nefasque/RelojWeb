@@ -5,9 +5,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
+    <!-- bootstrap-icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
   </head>
   <body>
-    <script src="js/main.js"> </script>
-     
+    <main class="main main-grid">
+      <nav class="tab">
+        <ul>
+          <li class="LIActive"><a title="Alarma"><i class="bi bi-alarm"></i></a></li>
+          <li><a title="Cronometro"><i class="bi bi-stopwatch"></i></a></li>
+          <li><a title="Temporizador"><i class="bi bi-hourglass-split"></i></a></li>
+        </ul>
+      </nav>
+
+      <div class="tab-conteiner grid-setAlarma">
+        <div class="reloj-backgroup">
+          <table class="reloj">
+            <tbody>
+              <tr>
+                <th title="horas" id="horas">17</th>
+                <th>:</th>
+                <th title="minutos" id="minutos">42</th>
+                <th>:</th>
+                <th title="segundos" id="segundos">00</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="setAlarma">
+          <button class="btn btn-add">
+            <i class="bi bi-plus-circle-fill"></i>
+          </button>
+        </div>
+
+        <table class="TableAlarma">
+          <tbody>
+            <tr>
+              <th><p>Alarma 2</p></th>
+              <th>
+                <time datetime="">12:00</time>
+              </th>
+              <th>
+                <button class="btn btn-accion btn-edit">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </main>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
