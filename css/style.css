@@ -5,46 +5,55 @@
 
 body {
   color: #000;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   background: #fff;
 }
 
-:root{
+:root {
   --colorPrymari: #f8814f;
   --colorPrymaritralucero: #f8814f5a;
   --colorPrymari-oscuro: #ec4822;
+
+  --colorBtnCronometroPlay: #00c853;
+  --colorBtnCronometroReplay: #fbef44;
+  --colorBtnCronometroReplay-oscuro: #ecd599;
+}
+
+/*font */
+@font-face {
+  font-family: reloj;
+  src: url("../fonts/digital-7.ttf");
 }
 
 /*
 * Grid MAIn
 */
 
-.main {
-  width: 99%;
-  max-width: 500px;
-  margin: auto;
-  height: auto;
-  border-radius: .4rem;
-
-  overflow: hidden;
-
-  display: grid;  
-  grid-auto-flow: dense;
-  grid-auto-columns: 1fr;
-  grid-template-areas: 
-    "tabs tabs tabs"
-    "cont cont cont"
+time{
+  font-family: reloj;
 }
 
-.tab{
+.main {
+  width: 100%;
+  height: 100vh;
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "tabs tabs tabs"
+    "cont cont cont";
+}
+
+.tab {
   grid-area: tabs;
 }
 
-.tab-conteiner{
+.tab-conteiner {
   grid-area: cont;
+  height: 100%;
 }
-
-
 
 /*Tabs*/
 
@@ -53,51 +62,49 @@ body {
   margin: 0;
 }
 
-.tab ul{
+.tab ul {
   width: 100%;
   margin: auto;
   list-style: none;
   text-align: left;
-  
+
   display: flex;
   justify-content: flex-start;
   border-bottom: 2px solid var(--colorPrymari);
-
 }
 
-.tab ul li{
+.tab ul li {
   padding: 0.3rem;
   flex-grow: 1;
   text-align: center;
   max-width: 8rem;
 }
 
-
-.tab ul li:hover{
+.tab ul li:hover {
   background: linear-gradient(to bottom, #0000, var(--colorPrymaritralucero));
   cursor: pointer;
 }
 
-.LIActive{
+.LIActive {
   background: linear-gradient(to bottom, #0000, var(--colorPrymaritralucero));
 }
 
-.tab ul li:hover > a{
+.tab ul li:hover > a {
   color: #555;
 }
 
-a{
+a {
   text-decoration: none;
   color: #222;
-  font-size: .8rem;
+  font-size: 1.5rem;
+
 }
 
-
 /* GRID-Alamar */
-.grid-setAlarma{
+.grid-setAlarma {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "reloj"
     "setAlarma"
     "Alarma";
@@ -107,32 +114,31 @@ a{
 }
 
 /*Buttom alarmar*/
-.setAlarma{
+.setAlarma {
   grid-area: setAlarma;
-  text-align: right; 
+  text-align: right;
 }
 
-.btn-add{
+.btn-add {
   color: var(--colorPrymari);
   font-size: 2.2em;
   margin: 0 5px;
   cursor: pointer;
 }
 
-.btn-add:hover{
-  color: var(--colorPrymari-oscuro); 
+.btn-add:hover {
+  color: var(--colorPrymari-oscuro);
 }
 
-.btn{
+.btn {
   background: none;
   border: none;
-  padding: .2rem;
+  padding: 0.2rem;
   cursor: pointer;
 }
 
-
 /*modal-backgroup*/
-.modal-backgroup{
+.modal-backgroup {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
@@ -144,7 +150,7 @@ a{
 }
 
 /*modal*/
-.modal{
+.modal {
   width: 100%;
   max-width: 500px;
   height: 60vh;
@@ -154,13 +160,12 @@ a{
   z-index: 200;
 }
 
-
 /*modal-SetAlarma*/
-.modal-setAlarma{
+.modal-setAlarma {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: dense;
-  grid-template-areas: 
+  grid-template-areas:
     "title title"
     "label-1 name"
     "label-2 contentSelect"
@@ -171,28 +176,27 @@ a{
   align-items: center;
 }
 
-
-.modal-setAlarma label{
+.modal-setAlarma label {
   text-align: center;
 }
 
-.modal-setAlarma .select{
+.modal-setAlarma .select {
   width: min-content;
   margin: 0 10px;
   background: none;
   border: none;
 }
 
-.modal-setAlarma h2{
+.modal-setAlarma h2 {
   grid-area: title;
   text-align: center;
 }
 
-.modal-setAlarma .label-1{
+.modal-setAlarma .label-1 {
   text-align: center;
 }
 
-#NombreAlarma{
+#NombreAlarma {
   grid-area: name;
   height: 2rem;
   border: 1px solid var(--colorPrymari);
@@ -202,15 +206,15 @@ a{
   outline: none;
 }
 
-#NombreAlarma:focus{
-  border: 2px solid var(--colorPrymari-oscuro) ;
+#NombreAlarma:focus {
+  border: 2px solid var(--colorPrymari-oscuro);
 }
 
-.modal-setAlarma .label-2{
+.modal-setAlarma .label-2 {
   grid-area: label-2;
 }
 
-.contentSelect{
+.contentSelect {
   grid-area: contentSelect;
   height: 2rem;
   width: 50%;
@@ -219,7 +223,7 @@ a{
   align-items: center;
 }
 
-.btn-save{
+.btn-save {
   grid-area: btn-save;
   width: 60%;
   margin: 1rem auto;
@@ -232,25 +236,24 @@ a{
   border-radius: 20px;
 }
 
-.btn-cancel{
+.btn-cancel {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 1rem;
 }
 
-.TableAlarma{
+.TableAlarma {
   width: 100%;
   grid-area: Alarma;
   border-collapse: collapse;
-  border: var(--colorPrymari) 1px solid; 
+  border: var(--colorPrymari) 1px solid;
   font-size: 1.5em;
 }
 
-.TableAlarma tbody tr th{
+.TableAlarma tbody tr th {
   padding: 10px 0;
 }
-
 
 .btn-accion {
   font-size: 1em;
@@ -259,21 +262,21 @@ a{
   background: #fe15241e;
 }
 
-.btn-accion:hover{
+.btn-accion:hover {
   color: #f00;
   background: #fe15244e;
 }
 
 /*Reloj*/
-.reloj{
+.reloj {
   grid-area: reloj;
   border-collapse: collapse;
   width: min-content;
   margin: auto;
 }
 
-.reloj tbody{
-  width: 100%; 
+.reloj tbody {
+  width: 100%;
   height: auto;
 }
 
@@ -282,7 +285,7 @@ a{
   padding: 0 0.2rem;
 }
 
-.reloj-backgroup{
+.reloj-backgroup {
   width: min-content;
   margin: 2rem auto;
   padding: 10px;
@@ -291,3 +294,111 @@ a{
   border: 1px solid var(--colorPrymari);
 }
 
+
+/*grid-cronometro*/
+.grid-cronometro {
+  display: grid;
+  width: 100%;
+  grid-auto-columns: 1fr;
+  grid-template-rows: .8fr .1fr .1fr;
+  grid-template-areas: 
+    "Vuetas"
+    "botones"
+    "cronometro";
+
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* table Vuetas */
+.tableVueltas {
+  grid-area: Vuetas;
+}
+
+/* botones */
+.btn-content {
+  grid-area: botones;
+}
+
+/* cronometro-background. */
+.cronometro-backgroup {
+  grid-area: cronometro;
+}
+
+/*----------------------*/
+
+.tableVueltas {
+  width: 100%;
+  overflow: scroll;
+}
+
+.tableVueltas tbody{
+  width: 100%;
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  overflow: scroll;
+}
+
+.tableVueltas tbody tr{
+  flex-grow: 1;
+  padding: .7em 0;
+}
+
+.tableVueltas tbody tr th {
+  padding: 0 1rem;
+  font-size: 1.4em;
+}
+
+/*---------------------------------*/
+.btn-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.btn-cronometro {
+  font-size: 1.5rem;
+  width: 45%;
+  color: #fff; 
+  border-radius: .2em;
+}
+
+.btn-cronometro-play{
+  background-color: var(--colorBtnCronometroPlay);
+}
+
+.btn-cronometro-replay{
+  background-color: var(--colorBtnCronometroReplay);
+}
+
+.btn-cronometro-replay-disable{
+  background-color: var(--colorBtnCronometroReplay-oscuro); 
+  color: #555;
+}
+
+.cronometro-backgroup{
+  text-align: center;
+  border: 2px solid var(--colorPrymari);
+  box-shadow: 0 0 10px var(--colorPrymari);
+  border-radius: 5em;
+  width: 80%;
+  margin: auto;
+}
+
+.cronometro {
+  font-family: reloj;
+  letter-spacing: 0.145em;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 500;
+  margin: auto;
+  padding: 0.4em 1em;
+}
+
+#milisegundo {
+  font-size: 0.5em;
+}
