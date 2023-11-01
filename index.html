@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Cronometro</title>
+    <title>Temporizador</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -27,118 +27,19 @@
         </ul>
       </nav>
 
-      <div class="grid-cronometro tab-conteiner">
-        <table class="tableVueltas">
-          <tbody>
-            <tr>
-              <th><p>Vuelta 1</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 2</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-            <tr>
-              <th><p>Vuelta 3</p></th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-              <th>
-                <time>17:47:00.<span id="milisegundo">12</span> </time>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+      <div class="grid-tempoizador tab-conteiner">
+
+        <div class="backgroup-reloj backgroup-temporizador">
+          <h2 class="cronometro" datetime="17:47:00">00:00:00</h2>
+        </div>
 
         <div class="btn-content">
-          <button class="btn-cronometro-play btn-cronometro btn">
+          <button class="btn-temporizador btn" id="btn-temporizador-Estableser">
             <i class="bi bi-play-circle"></i>
           </button>
-
-          <button class="btn-cronometro-replay-disable btn-cronometro btn">
-            <i class="bi bi-bootstrap-reboot"></i>
-          </button>
+          
+          
         </div>
-
-        <div class="cronometro-backgroup">
-          <h2 class="cronometro" datetime="17:47:00">
-            17:47:00.<span id="milisegundo">12</span>
-          </h2>
-        </div>
-
       </div>
     </main>
     <script src="js/main.js" type="module"></script>

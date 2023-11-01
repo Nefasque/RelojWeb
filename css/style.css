@@ -380,7 +380,7 @@ a {
   color: #555;
 }
 
-.cronometro-backgroup{
+.backgroup-reloj{
   text-align: center;
   border: 2px solid var(--colorPrymari);
   box-shadow: 0 0 10px var(--colorPrymari);
@@ -402,3 +402,29 @@ a {
 #milisegundo {
   font-size: 0.5em;
 }
+
+/* -----Temporizador -----*/
+
+/*set time button */
+.btn-temporizador{
+  border: 1px solid #000;
+  background: none;
+  font-size: 1.5rem;
+  color: #000;
+  flex-grow: 1;
+  margin: 5px;
+}
+
+/*background Temporizador*/
+.backgroup-temporizador{
+  margin: 2rem auto;   
+}
+
+.backgroup-temporizador h2{
+  margin: 0;
+}
+
+.btn-temporizador{
+  flex-basis: 100px;
+}
+
