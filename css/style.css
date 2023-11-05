@@ -238,6 +238,7 @@ a {
   background: var(--colorPrymari);
   padding: 5px 10px;
   justify-content: space-around;
+
   border-radius: 20px;
 }
 
@@ -257,6 +258,8 @@ a {
   display: flex;
   justify-content: center;
   height: 40vh;
+
+  border-top: 2px solid var(--colorPrymari);
 }
 
 .TableAlarma tbody{
